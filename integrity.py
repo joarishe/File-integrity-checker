@@ -6,8 +6,23 @@ def integritycheck(filepath): #function to check the integrity of the file.
 #if empty yeahhhhh then add if not compare
 #
 
-def filecheck (): #function to check if file exists or needs to be created.
- hashcheck=open(hashcheck.txt,"r")
+def filecheck (filepath): #function to check if filepath exists in hashcheck file.
+ Flag=False
+ with open("hashcheck.txt","r") as h: #variable stuff
+  while not Flag:
+   data=h.readline()
+   if data!=(""):
+    temppath=data.split(",")[0]
+    if temppath==filepath:
+     Flag=True
+     break
+   else:
+    break
+ return Flag
+#this function checks whether the filepath exists in the baseline file "hashcheck" and returns true or false.
+  
+ 
+ 
 
 
 #okay the plan is: i need a file to check the hash
