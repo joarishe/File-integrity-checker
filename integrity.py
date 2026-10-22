@@ -1,1 +1,1 @@
-print("Integrity check")
+print("Integrity")
